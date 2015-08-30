@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Handlers\Commands;
+
+use Illuminate\Queue\InteractsWithQueue;
+
+class CreateRegistrationCommandHandler
+{
+    /**
+     * Create the command handler.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the command.
+     *
+     * @param    $command
+     * @return void
+     */
+    public function handle( $command)
+    {
+        //
+    }
+}
