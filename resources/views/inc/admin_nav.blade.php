@@ -2,7 +2,7 @@
 							<div class="col-md-5">
 								<ul class="pull-right">
 
-									<li id="welcome" class="hidden-xs">Welcome User name</li>
+									<li id="welcome" class="hidden-xs">Welcome {!! ucwords(Auth::user()->name) !!}</li>
 									<li>
 										<a href="{{url('/')}}" class="logout">
 											<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
@@ -18,7 +18,13 @@
 									<li>
 										<a href="{{url('signup')}}" class="logout">
 											<span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>
-											Create Memeber <!-- logout icon -->
+											Create Member <!-- logout icon -->
+										</a>
+									</li>
+									<li>
+										<a href="{{route('admin.create')}}" class="logout">
+											<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+											Create Users <!-- logout icon -->
 										</a>
 									</li>
 								</ul>

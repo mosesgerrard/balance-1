@@ -11,7 +11,7 @@
 
 				<!-- bootstrap -->
 				{!! Html::style('css/bootstrap.min.css') !!}
-                {!! Html::style('css/bootstrap-theme.min.css') !!}
+                {{-- {!! Html::style('css/bootstrap-theme.min.css') !!} --}}
                 {!! Html::style('css/carousel.css') !!}
         	    {!! Html::style('css/style.css') !!}
         	    {!! Html::style('css/admin.css') !!}
@@ -46,10 +46,10 @@
     						</div>
     						<div id="navbar" class="navbar-collapse collapse">
     							<ul class="nav navbar-nav">
-    								<li class="{{set_active('home')}}"><a href="home">Home</a></li>
-    								<li class="{{set_active('about')}}"><a href="about">About</a></li>
+    								<li class="{{set_active('home')}}"><a href="{{url('home')}}">Home</a></li>
+    								<li class="{{set_active('about')}}"><a href="{{url('about')}}">About</a></li>
     								<li class="dropdown"  class="{{set_active('projects')}}">
-    									<a href="projects" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+    									<a href="{{url('projects')}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
     									<ul class="dropdown-menu">
     									    @if(Auth::check())
     									    <li><a href="{{route('admin.index')}}" >Admin Dashboard</a></li>
@@ -66,7 +66,7 @@
     										<li><a href="#">Terms &amp; Conditions</a></li>
     									</ul>
     								</li>
-								<li class="{{set_active('contact-us')}}"><a href="contact-us">Contact Us</a></li>
+								<li class="{{set_active('contact-us')}}"><a href="{{url('contact-us')}}">Contact Us</a></li>
 								<li><a href="#videos" data-toggle="modal" data-target="#videoModal" data-theVideo="http://youtube.com/embed/0zrIMJfZAAw?list=PLj89c1y-Pmlp4EikIX4wfioV3p7Vf70LT">
 								<button type="button" class="vid-transparent">Watch Videos</button></a></li>
     							</ul>

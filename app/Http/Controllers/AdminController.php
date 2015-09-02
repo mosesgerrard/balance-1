@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Auth\AuthController;
 use App\Member;
 use Illuminate\Http\Request;
 
@@ -28,18 +29,30 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth/register');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param AuthController $auth
+     * @internal param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(AuthController $auth)
     {
-        //
+        $data = Input::all();
+        $valid = $auth->validator($data);
+
+        if( $valid->fails()){
+
+            return redirect()->back()->withInput()->withErrors( $valid );
+        }
+        $user = $auth->create($data);
+
+        Auth::login($user);
+
+        return redirect()->to('admin');
     }
 
     /**

@@ -10,7 +10,12 @@ class Contact extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['personId', 'address', 'phone', 'email'];
 
-    // relationships
+  
+
+  	/**
+  	 * [person description]
+  	 * @return [type] [description]
+  	 */
     public function person(){
         return $this->belongsTo('App\Persons', 'id','personId');
     }
