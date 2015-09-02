@@ -60,5 +60,13 @@ class PublicController extends Controller
         return view('public.signup');
     }
 
+    public function postEmail(){
+
+        Mail::send('__partials/data/sendmail', ['some','on'], function($message){
+
+            $message->to('sulsiralumo@gmail.com')
+                    ->subject('a message from laravel');
+        });
+    }
 
 }

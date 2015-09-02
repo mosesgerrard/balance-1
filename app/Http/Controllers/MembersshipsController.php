@@ -194,4 +194,14 @@ class MembersshipsController extends Controller
     {
         //
     }
+
+
+    public function showApproved(){
+        $data = Member::approved()->paginate(50);
+        return view('admin.approved', compact('data'));
+    }
+    public function showUnapproved(){
+        $data = Member::unapproved()->paginate(50);
+        return view('admin.unapproved', compact('data'));
+    }
 }
