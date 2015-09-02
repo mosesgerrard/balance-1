@@ -18,7 +18,7 @@
 									<li>
 										<a href="{{url('signup')}}" class="logout">
 											<span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>
-											Create Memeber <!-- logout icon -->
+											Create Member <!-- logout icon -->
 										</a>
 									</li>
 									<li>

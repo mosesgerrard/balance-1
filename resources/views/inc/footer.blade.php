@@ -13,17 +13,16 @@
 		        	<p><b>Copyright </b>&copy; <?=date('Y')?> &middot; The Balance | All Rights Reserved &middot;</p>
 	        	</div>
 
+            @if(Auth::check())
 				<div class="navbar-text pull-center">
 					Admin System
 		        </div>
-
+            @endif
 		        <div>
 	        		<p class="pull-right"><a href="#">Back to top</a></p>
 	        	</div>
 	       </div>
-    		        <div>
-    	        		<p class="pull-right"><a href="#">Back to top</a></p>
-    	        	</div>
+
     	       </div>
     		</footer>
 
