@@ -13,17 +13,20 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Request as urlRequest;
 use Laracasts\Flash\Flash;
+use Symfony\Component\DomCrawler\Form;
 
 class MembersshipsController extends Controller
 {
     protected $member, $person, $contact,$education, $file;
 
     public function  __construct(Member $member, Persons $person, Contact $contact, Education $education, File $file){
+
         $this->member = $member;
         $this->person = $person;
         $this->contact = $contact;
         $this->education = $education;
         $this->file = $file;
+
     }
     /**
      * Display a listing of the resource.
@@ -169,7 +172,8 @@ class MembersshipsController extends Controller
      */
     public function edit($id)
     {
-
+      $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
+      return view('admin.edit',compact('data'));
     }
 
     /**
@@ -192,12 +196,20 @@ class MembersshipsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $member = $this->member->find((int)$id);
+
+        if(!$member) return  redirect()->to('approved');
+
+        $member->delete();
+
+        return redirect()->to('approved');
     }
 
 
     public function showApproved(){
-        $data = Member::approved()->paginate(50);
+
+$data = Member::approved()->with('person.contacts','person.files', 'person.education')->paginate(50);
+        // $data = Member::->paginate(50);
         return view('admin.approved', compact('data'));
     }
     public function showUnapproved(){

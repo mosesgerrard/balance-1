@@ -12,7 +12,6 @@
 */
 
 
-//use Illuminate\Routing\Route;
 
 Route::get('/', 'PublicController@index');
 
@@ -52,4 +51,14 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('admin', 'AdminController');
 //    Route::get('auth/register', 'Auth\AuthController@getRegister');
+});
+
+
+Route::any('download/{url}/{filename}',function($url,$filename){
+
+
+	if(File::exists($url)) return response()->download(public_path().'/'.$url.'/'.$filename);
+	
+	return redirect()->back();
+
 });

@@ -10,7 +10,7 @@
     		        </div>
 			<div class="container">
 				<div class="navbar-text pull-left">
-		        	<p><b>Copyright </b>&copy; <?=date('Y')?> &middot; The Balance | All Rights Reserved &middot;</p>
+		        	<p><b>Copyright </b>&copy; <?=date('Y')?> &middot; The Balance Crew | All Rights Reserved &middot;</p>
 	        	</div>
 
             @if(Auth::check())
@@ -49,6 +49,7 @@
 <script src="js/lightbox.min.js"></script>
 <script src="js/admin.js"></script>
     <script>
+    $('.link').find("ul.collapseable").show();
     //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
         autoPlayYouTubeModal();
       	function autoPlayYouTubeModal() {

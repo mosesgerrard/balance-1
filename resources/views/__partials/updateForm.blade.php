@@ -1,6 +1,12 @@
 
 		<!-- MEMBERSHIP FORM
 		======================================================= -->
+<?php 
+	// if(!isset($data)) $data = (object)[]
+	// 
+// dd($data->toArray());
+
+ ?>
 			<div class="form-header">
 				<h2>The Balance Membership Form</h2>
 				<p>Please read all the information carefully before completing the form. In order to be able to submit the form, you must fill in all the required fields denoted with <span class="red-star">&#9733;</span> symbol.</p>
