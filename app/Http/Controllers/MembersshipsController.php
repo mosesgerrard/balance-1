@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Education;
 use App\File;
+use App\Http\Requests\UpdateRegistrationRequest;
 use App\Member;
 use App\Persons;
 use Illuminate\Http\Request;
@@ -172,7 +173,9 @@ class MembersshipsController extends Controller
      */
     public function edit($id)
     {
+
       $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
+
       return view('admin.edit',compact('data'));
     }
 
@@ -183,9 +186,24 @@ class MembersshipsController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRegistrationRequest $request, $id)
     {
-        //
+          $input = $request->all();
+          extract($input);
+          $member = $this->member->find($id);
+          $member->update(["skills" => $input['skills'], "remarks" => $input['remarks']]);
+          $member->save();
+          $persons = $this->person->find($member->personId);
+          $persons->update($person);
+          $persons->save();
+          $person['contact']['phone'] = $person['contact']['phones'];
+            array_forget($person['contact'], 'phones');
+            $contacts = $this->contact->wherePersonid($member->personId)->first();
+            $contact = $contacts->update($person['contact']);
+            $contacts->save();
+
+// dont do the schools things
+
     }
 
     /**

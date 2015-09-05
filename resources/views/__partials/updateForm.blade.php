@@ -1,12 +1,7 @@
 
 		<!-- MEMBERSHIP FORM
 		======================================================= -->
-<?php 
-	// if(!isset($data)) $data = (object)[]
-	// 
-// dd($data->toArray());
 
- ?>
 			<div class="form-header">
 				<h2>The Balance Membership Form</h2>
 				<p>Please read all the information carefully before completing the form. In order to be able to submit the form, you must fill in all the required fields denoted with <span class="red-star">&#9733;</span> symbol.</p>
@@ -52,8 +47,7 @@
 
 			  	<label for="dob" class="col-sm-2 control-label">Date of Birth <span class="red-star">&#9733;</span></label>
 		    	<div class="col-sm-2">
-		    	{{$data->person['dob']}}
-		    	{!! Form::date("person[dob]",$data->person['dob'], ["class"=>"form-control",  "placeholder"=>"Birthday", "required"=> true]) !!}
+		    	{!! Form::date("person[dob]",$data->person['dob'], ["class"=>"form-control",  "placeholder"=>"Birthday"]) !!}
 		    	</div>
 		  	</div>
               &nbsp;&nbsp;&nbsp;
@@ -90,7 +84,7 @@
 		  	<div class="form-group">
 		    	<label for="inputAddress" class="col-sm-2 control-label">Address <span class="red-star">&#9733;</span></label>
 		    	<div class="col-sm-10">
-		    	{!! Form::text("person['contacts'][address]",$data->person['contacts']['address'], ["class"=>"form-control",  "placeholder"=>"House Address"]) !!}
+		    	{!! Form::text("person[contact][address]",$data->person['contacts']['address'], ["class"=>"form-control",  "placeholder"=>"House Address"]) !!}
 		    	</div>
 		  	</div>
 		  	&nbsp;&nbsp;&nbsp;
@@ -122,11 +116,11 @@
 		  	<div class="form-group">
 		    	<label for="inputUni" class="col-sm-2 control-label">University/College</label>
 		    	<div class="col-sm-4">
-		    	{!! Form::text("university[name]",null, ["class"=>"form-control",  "placeholder"=>"Name of Last University or College Attended"]) !!}
+		    	{!! Form::text("school[university][name]",null, ["class"=>"form-control",  "placeholder"=>"Name of Last University or College Attended"]) !!}
 		    	</div>
 		    	<label for="inputUniYear" class="col-sm-2 control-label">Year Completed</label>
 		    	<div class="col-sm-4">
-		    	{!! Form::text("university[year]",null, ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
+		    	{!! Form::text("school[university][year]",null, ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
 
 		    	</div>
 		  	</div>
@@ -173,15 +167,16 @@
 		    	    {!! Form::text("school[type]",$contact['schType'], ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
 
 		    	</div> --}}
-		    	<label for="inputSenior" class="col-sm-2 control-label">{!! ucwords($contact['schType']) !!}<span class="red-star">&#9733;</span></label>
+		    	<?php $type = $contact['schType']; ?>
+		    	<label for="inputSenior" class="col-sm-2 control-label">{!! ucwords($type) !!}<span class="red-star">&#9733;</span></label>
 		    	<div class="col-sm-4">
 
-		    	    {!! Form::text("school[name]",$contact['school'], ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
+		    	    {!! Form::text("school[$type][name]",$contact['school'], ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
 
 		    	</div>
 		    	<label for="inputSeniorYear" class="col-sm-2 control-label">Year Completed <span class="red-star">&#9733;</span></label>
 		    	<div class="col-sm-4">
-		    	{!! Form::text("school[year]",$contact['year'], ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
+		    	{!! Form::text("school[$type][year]",$contact['year'], ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
 
 		    	</div>
 		  	</div>

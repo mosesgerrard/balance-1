@@ -10,7 +10,7 @@
 
 @section('container')
 
-    {!! Form::model($data, ['route'=>['memberships.store', $data->id],"class"=>"form-horizontal", 'files'=>true]) !!}
+    {!! Form::model($data, ['route'=>['memberships.update', $data->id],"class"=>"form-horizontal", 'files'=>true, 'method'=>'PUT']) !!}
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -21,6 +21,6 @@
         </div>
     @endif
     @include('__partials.message')
-        @include('__partials/registrationForm')
+        @include('__partials/updateForm')
     {!!Form::close()!!}
 @endsection
