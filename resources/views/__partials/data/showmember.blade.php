@@ -208,26 +208,8 @@
 			    	
 			    </div>
 		  	</div>
-		  	&nbsp;&nbsp;&nbsp;
+		
 
 
-		  	<div class="form-group" enctype="multipart/form-data" action="fileupload.php" method="post">
-		    	<label for="inputFile" class="col-sm-2 control-label">Upload Documents<span class="red-star">&#9733;</span></label>
-		    	
-		    	{!!Form::file('file')!!}
-		    	<p class="help-block">Please upload a copy of your ID card or birth certificate, school certificates, and/or extra curricular certificate(s) and two passport size photographs.</p>
-		    	<div class="checkbox">
-		    		<label>
-
-		    		{!!Form::checkbox('agreed',null,['required'=>true])!!}
-
-		    			&#9733;</span> By checking here, you have agreed to our <a href="#">Terms and Conditions</a> policies.
-		    		</label>
-		    	</div>
-		    	&nbsp;&nbsp;&nbsp;
-
-		    	<div class="col-sm-6">
-					<button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
-				</div>
 		  	</div>
 		  	&nbsp;&nbsp;&nbsp;

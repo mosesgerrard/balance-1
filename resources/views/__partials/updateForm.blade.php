@@ -111,80 +111,7 @@
 		  	&nbsp;&nbsp;&nbsp;
 
 
-@if(!isset($data->person['education']) or empty($data->person['education']))
 
-		  	<div class="form-group">
-		    	<label for="inputUni" class="col-sm-2 control-label">University/College</label>
-		    	<div class="col-sm-4">
-		    	{!! Form::text("school[university][name]",null, ["class"=>"form-control",  "placeholder"=>"Name of Last University or College Attended"]) !!}
-		    	</div>
-		    	<label for="inputUniYear" class="col-sm-2 control-label">Year Completed</label>
-		    	<div class="col-sm-4">
-		    	{!! Form::text("school[university][year]",null, ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
-
-		    	</div>
-		  	</div>
-		  	&nbsp;&nbsp;&nbsp;
-
-		  	<div class="form-group">
-		    	<label for="inputSenior" class="col-sm-2 control-label">High/Senior School <span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-
-		    	    {!! Form::text("hschool[name]",null, ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
-
-		    	</div>
-		    	<label for="inputSeniorYear" class="col-sm-2 control-label">Year Completed <span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-		    	{!! Form::text("hschool[year]",null, ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
-
-		    	</div>
-		  	</div>
-		  	&nbsp;&nbsp;&nbsp;
-
-		  	<div class="form-group">
-		    	<label for="inputJunior" class="col-sm-2 control-label">Upper/Junior School <span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-
-		    	{!! Form::text("jschool[name]",null, ["class"=>"form-control",  "placeholder"=>"Name Junior or Upper Basic School Attended"]) !!}
-
-		    	</div>
-		    	<label for="inputJuniorYear" class="col-sm-2 control-label">Year Completed <span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-		    	{!! Form::text("jschool[year]",null, ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
-
-		    	</div>
-		  	</div>
-		  	&nbsp;&nbsp;&nbsp;&nbsp;
-
-@else
-
-@foreach ($data->person['education'] as $index => $contact)
-
-		  	<div class="form-group">
-{{-- 		  	 <label for="inputSenior" class="col-sm-2 control-label">{!! ucwords($contact['schType']) !!}<span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-
-		    	    {!! Form::text("school[type]",$contact['schType'], ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
-
-		    	</div> --}}
-		    	<?php $type = $contact['schType']; ?>
-		    	<label for="inputSenior" class="col-sm-2 control-label">{!! ucwords($type) !!}<span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-
-		    	    {!! Form::text("school[$type][name]",$contact['school'], ["class"=>"form-control",  "placeholder"=>"Name of Senior or High School Attended"]) !!}
-
-		    	</div>
-		    	<label for="inputSeniorYear" class="col-sm-2 control-label">Year Completed <span class="red-star">&#9733;</span></label>
-		    	<div class="col-sm-4">
-		    	{!! Form::text("school[$type][year]",$contact['year'], ["class"=>"form-control",  "placeholder"=>"Year Completed"]) !!}
-
-		    	</div>
-		  	</div>
-		  	&nbsp;&nbsp;&nbsp;
-@endforeach
-
-
-@endif
 
 
 
@@ -211,20 +138,6 @@
 		  	&nbsp;&nbsp;&nbsp;
 
 
-		  	<div class="form-group" enctype="multipart/form-data" action="fileupload.php" method="post">
-		    	<label for="inputFile" class="col-sm-2 control-label">Upload Documents<span class="red-star">&#9733;</span></label>
-		    	
-		    	{!!Form::file('file')!!}
-		    	<p class="help-block">Please upload a copy of your ID card or birth certificate, school certificates, and/or extra curricular certificate(s) and two passport size photographs.</p>
-		    	<div class="checkbox">
-		    		<label>
-
-		    		{!!Form::checkbox('agreed',null,['required'=>true])!!}
-
-		    			&#9733;</span> By checking here, you have agreed to our <a href="#">Terms and Conditions</a> policies.
-		    		</label>
-		    	</div>
-		    	&nbsp;&nbsp;&nbsp;
 
 		    	<div class="col-sm-6">
 					<button type="submit" class="btn btn-lg btn-primary btn-block">Submit</button>

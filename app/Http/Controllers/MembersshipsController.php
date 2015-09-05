@@ -163,6 +163,9 @@ class MembersshipsController extends Controller
             return redirect()->back();
         }
 
+      $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
+
+      return view('admin.show',compact('data'));
     }
 
     /**
@@ -202,7 +205,7 @@ class MembersshipsController extends Controller
             $contact = $contacts->update($person['contact']);
             $contacts->save();
 
-// dont do the schools things
+            return redirect()->to('admin');
 
     }
 
