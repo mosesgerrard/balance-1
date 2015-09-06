@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Education;
 use App\File;
+use App\Http\Requests\UpdateRegistrationRequest;
 use App\Member;
 use App\Persons;
 use Illuminate\Http\Request;
@@ -13,17 +14,20 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Request as urlRequest;
 use Laracasts\Flash\Flash;
+use Symfony\Component\DomCrawler\Form;
 
 class MembersshipsController extends Controller
 {
     protected $member, $person, $contact,$education, $file;
 
     public function  __construct(Member $member, Persons $person, Contact $contact, Education $education, File $file){
+
         $this->member = $member;
         $this->person = $person;
         $this->contact = $contact;
         $this->education = $education;
         $this->file = $file;
+
     }
     /**
      * Display a listing of the resource.
@@ -159,6 +163,9 @@ class MembersshipsController extends Controller
             return redirect()->back();
         }
 
+      $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
+
+      return view('admin.show',compact('data'));
     }
 
     /**
@@ -170,6 +177,9 @@ class MembersshipsController extends Controller
     public function edit($id)
     {
 
+      $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
+
+      return view('admin.edit',compact('data'));
     }
 
     /**
@@ -179,9 +189,24 @@ class MembersshipsController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRegistrationRequest $request, $id)
     {
-        //
+          $input = $request->all();
+          extract($input);
+          $member = $this->member->find($id);
+          $member->update(["skills" => $input['skills'], "remarks" => $input['remarks']]);
+          $member->save();
+          $persons = $this->person->find($member->personId);
+          $persons->update($person);
+          $persons->save();
+          $person['contact']['phone'] = $person['contact']['phones'];
+            array_forget($person['contact'], 'phones');
+            $contacts = $this->contact->wherePersonid($member->personId)->first();
+            $contact = $contacts->update($person['contact']);
+            $contacts->save();
+
+            return redirect()->to('admin');
+
     }
 
     /**
@@ -192,12 +217,20 @@ class MembersshipsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $member = $this->member->find((int)$id);
+
+        if(!$member) return  redirect()->to('approved');
+
+        $member->delete();
+
+        return redirect()->to('approved');
     }
 
 
     public function showApproved(){
-        $data = Member::approved()->paginate(50);
+
+$data = Member::approved()->with('person.contacts','person.files', 'person.education')->paginate(50);
+        // $data = Member::->paginate(50);
         return view('admin.approved', compact('data'));
     }
     public function showUnapproved(){

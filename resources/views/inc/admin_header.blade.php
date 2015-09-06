@@ -7,7 +7,7 @@
 
 		<meta name="description" content="The Balance Official Website">
 		<meta name="authors" content="Musa Touray <mkadsamba86@gmail.com>, mamadou jallow <sulsiralumo@gmail.com">
-		<title>The Balance - @yield('title')</title>
+		<title>The Balance - @yield('title', 'this is our defualt')</title>
 
 				<!-- bootstrap -->
 				{!! Html::style('css/bootstrap.min.css') !!}

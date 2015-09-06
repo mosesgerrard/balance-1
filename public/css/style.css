@@ -104,7 +104,7 @@ body {
 }
 
 .modal-dialog {
-	width: 550px;
+	width: 57%;
 	margin: 70px auto;
 	background-color: #eee;
 	border-radius: 10px;
@@ -165,4 +165,9 @@ footer {
 .navbar-text > a {
 	color: inherit;
 	text-decoration: none;
+}
+.blanker{
+	border-style: none;
+    padding: 0;
+    margin: 0;
 }

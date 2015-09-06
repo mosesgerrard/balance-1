@@ -19,6 +19,7 @@ class AdminController extends Controller
     public function index()
     {
        $data = Member::with('person.contacts','person.files', 'person.education')->paginate(50);
+
        return view('admin.index',compact('data'));
     }
 
