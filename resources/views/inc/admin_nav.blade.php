@@ -33,7 +33,7 @@
 							<div class="col-md-7">
 								<ul class="pull-right">
 																	<li>
-                                										<a href="{{url('auth/logout')}}" class="logout">
+                                										<a href="{{url('home')}}" class="logout">
                                 											<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                                 											Public Site <!-- logout icon -->
                                 										</a>
