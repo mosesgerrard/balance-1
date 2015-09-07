@@ -32,7 +32,7 @@ Route::post('sendmessage', function(){
                     ->subject($input['subject']);
 
         });
-    return Redirect::back();
+    //return Redirect::back();
 
 });
 
