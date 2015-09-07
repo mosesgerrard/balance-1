@@ -29,36 +29,79 @@
 						
 				</section>
 
-				<section class="col-md-6">
-					<div class="heading">						
-						<h1>Contact Details</h1>
-					</div>
-					&nbsp;&nbsp;
-					<div>
-						<h4>The Balance CEO/Manager</h4>
-						<p><b>Mr. Baba Ceesay</b></p>
-					</div>
-					&nbsp;&nbsp;
-					<div>
-						<h4>Address</h4>
-						<p>GRTS Building, MDI Road <br />
-							Kanifing, Serrekunda <br />
-							The Gambia <br />
-							West Africa
-						</p>
-					</div>
-					&nbsp;&nbsp;
-					<div>
-						<h4>Telephone</h4>
-						<p>(+220) 726 2807</p>
-					</div>
-					&nbsp;&nbsp;
-					<div>
-						<h4>Email</h4>
-						<p>queensyj2@hotmail.co.uk</p>
-					</div>
-					<p class="tagline"></p>
-				</section>
+								<section class="col-md-3 section-unit">
+                					<div class="row">
+                						<div class="heading">
+                							<h1>Contact Details</h1>
+                						</div>
+                						&nbsp;&nbsp;
+
+                						<div>
+                							<h4>Address</h4>
+                							<p>GRTS Building, MDI Road <br />
+                								Kanifing, Serrekunda <br />
+                								The Gambia <br />
+                								West Africa
+                							</p>
+                						</div>
+                						&nbsp;&nbsp;
+                						<div>
+                							<h4>The Balance CEO/President</h4>
+                							<p>Mr. Baba Ceesay</p>
+                						</div>
+                						&nbsp;&nbsp;
+                						<div>
+                							<h4>Telephone</h4>
+                							<p>(+220) 726 2807 / 613 3056 / 376 2807</p>
+                						</div>
+                						&nbsp;&nbsp;
+                						<div>
+                							<h4>Email</h4>
+                							<p>queensyj2@hotmail.co.uk</p>
+                						</div>
+                					</div>
+                					<p class="tagline"></p>
+                				</section>
+
+                				<section class="col-md-3 section-unit">
+                					<div class="row">
+                						&nbsp;&nbsp;
+                						&nbsp;&nbsp;
+
+                						<div class="heading">
+                							<h1></h1>
+                						<br /><br /><br />
+                						</div>
+                						<div>
+                							<h4>Secretary General</h4>
+                							<p>Adam Nyang</p>
+                						</div>
+                						&nbsp;
+                						<div>
+                							<h4>Telephone</h4>
+                							<p>(+220) 394 6779</p>
+                						</div>
+
+
+                						<div class="heading">
+                							<h1></h1>
+                						<br /><br />
+                						</div>
+                						<div>
+                							<h4>Finance Manager</h4>
+                							<p>Haddy Saine</p>
+                						</div>
+                						&nbsp;
+                						<div>
+                							<h4>Telephone</h4>
+                							<p>(+220) 752 3227</p>
+                						</div>
+                						&nbsp;&nbsp;
+                					</div>
+                					<p class="tagline"></p>
+                				</section>
+
+
 			</div>
 		</div>
 @endsection

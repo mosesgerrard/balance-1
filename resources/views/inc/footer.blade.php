@@ -2,12 +2,14 @@
     		======================================================= -->
     		<footer>
     			<div class="container">
+    			     @if(!Auth::check())
     				<div class="navbar-text pull-left">
     					<a href="https://www.youtube.com/channel/UCUF_daaXZ-miCLCc1IFX6MA/playlists" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a>
     					<a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
     					<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
     					<a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
     		        </div>
+    		        @endif
 			<div class="container">
 				<div class="navbar-text pull-left">
 		        	<p><b>Copyright </b>&copy; <?=date('Y')?> &middot; The Balance Crew | All Rights Reserved &middot;</p>

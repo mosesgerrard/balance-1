@@ -44,16 +44,22 @@
 	    <hr role="separator" class="divider">
 	      	<div class="partners">
 	      		<div class="container">
-		      		<h2 class="partners-heading">Partners</h2>
-			        <p class="lead">Our main sponsors and partners include global institutions like the EU, The World Bank and GRTS</p>
+	      		
+		      		<h2 class="partners-heading">Partnerships</h2>
+
+			        <p class="lead">Our main partners include global institutions like the EU, GRTS and NEA</p>
 		      		<div class="row">
-			        	<div class="">
-			          		<img class=" col-lg-2 img-circle img-responsive" src="img/grts.jpg" width="100" height="100" alt="GRTS image">
-			        		&nbsp;&nbsp;&nbsp;
-			          		<img class="col-lg-2 img-circle img-responsive" src="img/eu_logo.jpg" width="100" height="100" alt="GRTS image">
-			          		&nbsp;&nbsp;&nbsp;
-			          		<img class="col-lg-2 img-circle img-responsive" src="img/nea.jpg" width="100" height="100" alt="GRTS image">
-			          		&nbsp;&nbsp;&nbsp;
+
+			        	<div class="partners-img clearfix">
+
+			        	<img class="img-circle img-responsive" src="img/eu_logo.jpg" alt="EU LOGO">
+
+			          		<img class="img-circle img-responsive" src="img/grts.jpg" alt="GRTS LOGO">
+
+			          		
+
+			          		<img class="img-circle img-responsive" src="img/nea.jpg" alt="NEA LOGO">
+
 			        	</div>
 			        </div>&nbsp;&nbsp;&nbsp;
 			    </div>

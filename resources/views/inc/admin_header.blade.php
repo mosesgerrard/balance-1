@@ -13,7 +13,7 @@
 				{!! Html::style('css/bootstrap.min.css') !!}
                 {!! Html::style('css/bootstrap-theme.min.css') !!}
                 {!! Html::style('css/carousel.css') !!}
-        	    {!! Html::style('css/style.css') !!}
+                {!! Html::style('css/style.css') !!}
         	    {!! Html::style('css/admin.css') !!}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 {!! Html::style('css/lightbox.css') !!}
