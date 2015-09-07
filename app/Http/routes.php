@@ -12,6 +12,7 @@
 */
 
 
+use Illuminate\Support\Facades\Redirect;
 
 Route::get('/', 'PublicController@index');
 
@@ -31,7 +32,8 @@ Route::post('sendmessage', function(){
                     ->subject($input['subject']);
 
         });
-    return redirect()->to('home');
+    return Redirect::back();
+
 });
 
 Route::get('signup', 'PublicController@showSignup');
