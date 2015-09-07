@@ -24,7 +24,7 @@ Route::get('videos', 'PublicController@showVideos');
 Route::get('gallery', 'PublicController@showGallary');
 // Route::post('contact-us', ['as'=>'sendmessage', 'uses'=>'PublicController@postEmail']);
 Route::post('sendmessage', function(){
-    $input = request()->all();
+    $input = \Input::all();
         Mail::queue('__partials/data/sendmail', ['input'=>$input] , function($message) use($input){
 
             $email = "thebalancegambia@gmail.com";
@@ -32,8 +32,8 @@ Route::post('sendmessage', function(){
                     ->subject($input['subject']);
 
         });
-    //return Redirect::back();
 
+    return redirect()->to('home');
 });
 
 Route::get('signup', 'PublicController@showSignup');
@@ -63,7 +63,7 @@ Route::any('download/{url}/{filename}',function($url,$filename){
 
 
 	if(File::exists($url)) return response()->download(public_path().'/'.$url.'/'.$filename);
-	
+
 	return redirect()->back();
 
 });
