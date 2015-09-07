@@ -23,12 +23,15 @@ Route::get('videos', 'PublicController@showVideos');
 Route::get('gallery', 'PublicController@showGallary');
 // Route::post('contact-us', ['as'=>'sendmessage', 'uses'=>'PublicController@postEmail']);
 Route::post('sendmessage', function(){
+    $input = request()->all();
+        Mail::queue('__partials/data/sendmail', ['input'=>$input] , function($message) use($input){
 
-        Mail::send('__partials/data/sendmail', ['some','on'], function($message){
+            $email = "queensyj2@hotmail.co.uk";
+            $message->to($email)
+                    ->subject($input['subject']);
 
-            $message->to('sulsiralumo@gmail.com')
-                    ->subject('a message from laravel');
         });
+    return redirect()->to('home');
 });
 
 Route::get('signup', 'PublicController@showSignup');

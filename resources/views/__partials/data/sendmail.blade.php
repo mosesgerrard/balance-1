@@ -1,13 +1,7 @@
 <div class="row">
-	<h1> YOU SEND AN EMAIL</h1>
-
-	<P>
-		
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</P>
+    <h1>{!! ucwords($input['subject']) !!}</h1>
+    <strong>Sender: {!! ucwords($input['email']) !!}</strong>
+    <p>
+        {!! $input['message'] !!}
+    </p>
 </div>
