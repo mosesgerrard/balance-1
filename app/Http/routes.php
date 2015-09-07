@@ -26,7 +26,7 @@ Route::post('sendmessage', function(){
     $input = request()->all();
         Mail::queue('__partials/data/sendmail', ['input'=>$input] , function($message) use($input){
 
-            $email = "queensyj2@hotmail.co.uk";
+            $email = "thebalancegambia@gmail.com";
             $message->to($email)
                     ->subject($input['subject']);
 

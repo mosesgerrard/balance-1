@@ -5,16 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width-device-width initial-scale=1" >
 
-		<meta name="description" content="The Balance Official Website">
+		<meta name="description" content="The Balance Official Website, The Balance - learn, think and create">
 		<meta name="authors" content="Musa Touray <mkadsamba86@gmail.com>, mamadou jallow <sulsiralumo@gmail.com">
-		<title>The Balance - @yield('title')</title>
+		<title>The Balance - learn, think and create @yield('title')</title>
 
 				<!-- bootstrap -->
 				{!! Html::style('css/bootstrap.min.css') !!}
                 {{-- {!! Html::style('css/bootstrap-theme.min.css') !!} --}}
                 {!! Html::style('css/carousel.css') !!}
         	    {!! Html::style('css/style.css') !!}
-        	    {!! Html::style('css/admin.css') !!}
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 {!! Html::style('css/lightbox.css') !!}
 
@@ -74,11 +74,11 @@
     								<ul class="nav navbar-nav navbar-right">
 
                                 		    							    @if(Auth::check())
-                                                                                <li><a href="{{url('auth/logout')}}"><button type="button" class="btn btn-success pull-right">Log out</button></a></li>
+                                                                                <li><a href="{{url('auth/logout')}}"><button type="button" class="btn btn-success">Log out</button></a></li>
                                             							    @else
-                                            							    <li><a href="#admin-dashboard" data-toggle="modal"><button type="button" class="btn btn-success pull-right">Admin Login</button></a></li>
+                                            							    <li><a href="#admin-dashboard" data-toggle="modal"><button type="button" class="btn btn-success">Admin Login</button></a></li>
                                             							    @endif
-                                        <li><a href="signup"><button type="button" class="btn btn-primary pull-right">Sign Up</button></a></li>
+                                        <li><a href="signup"><button type="button" class="btn btn-primary">Sign Up</button></a></li>
                                 	</ul>
     						</div>
     					</div>

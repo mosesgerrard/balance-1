@@ -1,195 +1,208 @@
 html, body {
-	background-color: #f3f3f4;
-	color: #676a6c;
-	height: 100%;
-	bottom: 0px;
+    background-color: #f3f3f4;
+    color: #676a6c;
+    height: 100%;
+    bottom: 0px;
 }
 
 .display-table {
-	display: table;
-	height: 100%;
-	width: 100%;
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 .display-table-row {
-	display: table-row;
-	height: 100%;
+    display: table-row;
+    height: 100%;
 }
 
 .display-table-cell {
-	display: table-cell;
-	height: 100%;
+    display: table-cell;
+    height: 100%;
 }
 
 .valign-top {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 
 /* ==================SIDEBAR======================= */
 #sidebar {
-	background-color: #2f4050;
-	padding: 0px;
-	margin-left: 0px
+    background-color: #2f4050;
+    padding: 0px;
+    margin-left: 0px
 }
 
 #sidebar h1 {
-	color: #1f3647;
-	text-align: center;
-	margin: 13px 0px;
-	font-size: 25px;
+    color: #1f3647;
+    text-align: center;
+    margin: 13px 0px;
+    font-size: 25px;
 }
 
 #sidebar ul {
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #sidebar a {
-	padding: 12px 20px;
-	text-decoration: none;
-	color: #9fb1c2;
-	font-weight: bold;
-	font-size: 15px;
-	display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #9fb1c2;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
 }
 
 #sidebar .fa {
-	margin-right: 6px;
+    margin-right: 6px;
 }
 
 #sidebar a:hover {
-	background-color: #293846;
-	color: #fff;
-	display: block;
+    background-color: #293846;
+    color: #fff;
+    display: block;
 }
 
 #sidebar .active a {
-	background-color: #293846;
-	color: #fff;
+    background-color: #293846;
+    color: #fff;
 }
 
 #sidebar .collapseable li {
-	padding-left: 30px;
-	padding-top: 5px;
+    padding-left: 30px;
+    padding-top: 5px;
 }
 
 #sidebar .collapseable a {
-	color: #9fb1c2;
-	font-size: 14px;
-	padding: 4px 20px;
-	text-decoration: none;
-	display: block;
+    color: #9fb1c2;
+    font-size: 14px;
+    padding: 4px 20px;
+    text-decoration: none;
+    display: block;
 }
 
 #sidebar .collapseable a:hover {
-	color: #fff;
+    color: #fff;
 }
 
 #sidebar .collapseable {
-	border-left: 4px solid #1ab394;
-	background-color: #293846;
+    border-left: 4px solid #1ab394;
+    background-color: #293846;
 }
 
 #sidebar .link >ul >li {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 
 /* ==================NAVBAR======================= */
 #nav-header {
-	background-color: #fff;
-	border-bottom: 1px solid #e7eaec;
+    background-color: #fff;
+    border-bottom: 1px solid #e7eaec;
 }
 
 #nav-header #search-field {
-	padding-top: 17px;
-	vertical-align: center;
-	border: none;
-	width: 300px;
-	outline: none;
+    padding-top: 17px;
+    vertical-align: center;
+    border: none;
+    width: 300px;
+    outline: none;
 }
 
 #nav-header ul {
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-	color: #676a6c;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    color: #676a6c;
 }
 
 #nav-header ul li {
-	float: left;
-	margin-left: 15px;
-	padding: 17px 0px;
+    float: left;
+    margin-left: 15px;
+    padding: 17px 0px;
 }
 
 #nav-header ul .glyphicon {
-	color: #676a6c;
+    color: #676a6c;
 }
 
 .label-message {
-	background-color: #1ab394;
+    background-color: #1ab394;
 }
 
 #nav-header ul a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 #nav-header .logout {
-	color: #676a6c;
+    color: #676a6c;
 }
 
 #nav-header .logout:hover {
-	color: #676a6c;
+    color: #676a6c;
 }
 
 #nav-header #welcome {
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
 #nav-header ul .label {
-	position: absolute;
-	margin-top: -10px;
-	margin-left: -5px;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -5px;
 }
 
 #nav-header .fixed-width {
-	width: 35px;
+    width: 35px;
 }
 
 
 /* ==================SIDEBAR TOGGLE NAVBAR======================= */
 .navbar-default {
-	background-color: #fff;
+    background-color: #fff;
 }
 
 .navbar-default .navbar-toggle {
-	border-color: #1ab394;
-	background-color: #1ab394;
+    border-color: #1ab394;
+    background-color: #1ab394;
 }
 
 .navbar-default .icon-bar {
-	border: 1px solid #fff;
+    border: 1px solid #fff;
 }
 
 .navbar-default .navbar-toggle:hover {
-	background-color: #1ab394;
+    background-color: #1ab394;
 }
 
 .navbar-default .navbar-toggle:focus {
-	background-color: #1ab394;
+    background-color: #1ab394;
 }
 
 
 /* ==================ALL MEMBERS TABLE======================= */
 .heading-members {
-	background-color: #fff;
-	margin-top: 20px;
-	border-bottom: 20px solid #f3f3f4;
+    background-color: #fff;
+    margin-top: 20px;
+    border-bottom: 20px solid #f3f3f4;
 }
 
 .all-members {
-	background-color: #fff;
-	margin-top: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+
+/* ==================MODAL POPUP TABLE======================= */
+.modal-dialog {
+    width: 57%;
+    margin-top: 93px;
+    margin-left: 252px;
+}
+#id-member {
+    width: 100%;
+    background-color: transparent;
+
 }
