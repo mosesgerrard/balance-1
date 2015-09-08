@@ -84,7 +84,7 @@ class AuthController extends Controller
     }
     public function getRegister(){
 
-        return view('auth/register');
+        return view('admin/create');
 
     }
 
