@@ -29,6 +29,7 @@ class AuthController extends Controller
      * Create a new authentication controller instance.
      *
      */
+    protected $loginPath = '/auth/login';
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
@@ -79,9 +80,11 @@ class AuthController extends Controller
             // Authentication passed...
             return redirect()->intended('admin');
         }
+        return redirect()->to('home');
     }
     public function getRegister(){
 
+        return view('admin/create');
 
     }
 
