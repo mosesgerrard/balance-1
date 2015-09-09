@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> ac1fc93e4fea5399ea6eabd7ad0c240426208380
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;

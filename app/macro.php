@@ -1,4 +1,6 @@
 <?php
+<<<<<<< HEAD
+=======
 /**
  * Created by mamadou.
  * User: mamadou
@@ -7,3 +9,4 @@
  */
 
 
+>>>>>>> ac1fc93e4fea5399ea6eabd7ad0c240426208380
