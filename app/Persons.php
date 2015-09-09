@@ -10,7 +10,7 @@ class Persons extends Model
     protected $table = 'persons';
     protected $primaryKey = 'id';
     protected $fillable = ['title', 'fullname', 'gender', 'nationalities', 'occupation', 'dob'];
-    protected $dates = ['dob'];
+    // protected $dates = ['dob'];
     public function member(){
         return $this->belongsTo('App\Member', 'id','personId');
     }
@@ -28,7 +28,7 @@ class Persons extends Model
     }
 
 //
-//    public function getDobAttribute($date){
-//       $this->attributes['dob'] = Carbon::createFromFormat('Y-m-d', $date);
-//    }
+   // public function getDobAttribute($date){
+   //    $this->attributes['dob'] = Carbon::createFromFormat('Y-m-d', $date);
+   // }
 }

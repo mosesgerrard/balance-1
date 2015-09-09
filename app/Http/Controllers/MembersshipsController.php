@@ -165,6 +165,8 @@ class MembersshipsController extends Controller
 
       $data = $this->member->whereId((int)$id)->with('person.contacts','person.files', 'person.education')->first();
 
+      dd($data->toArray());
+
       return view('admin.show',compact('data'));
     }
 
