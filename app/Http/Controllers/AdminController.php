@@ -30,7 +30,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('auth/register');
+        return view('admin.create');
     }
 
     /**
@@ -42,7 +42,8 @@ class AdminController extends Controller
      */
     public function store(AuthController $auth)
     {
-        $data = Input::all();
+        $data = \Input::all();
+
         $valid = $auth->validator($data);
 
         if( $valid->fails()){
@@ -51,7 +52,7 @@ class AdminController extends Controller
         }
         $user = $auth->create($data);
 
-        Auth::login($user);
+        \Auth::login($user);
 
         return redirect()->to('admin');
     }

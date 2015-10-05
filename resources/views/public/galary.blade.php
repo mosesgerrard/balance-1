@@ -16,13 +16,21 @@
 			<div class="gallery">
 				<div class="row" preload="true">
 					<div class="col-lg-3">
+<<<<<<< HEAD
 						<a href="img/pic1.JPG" data-title="The Balance Photo Gallery 1" data-lightbox="theBalance">
+=======
+						<a href="img/pic1.jpg" data-title="The Balance Photo Gallery 1" data-lightbox="theBalance">
+>>>>>>> c4cdb641429a6bd925d6ceabe05f18f685d6bac3
 						{!! Html::image('img/pic1.JPG','galary image', [ "width"=>"200px", "class"=>"img-thumbnail"]); !!}
 						</a>
 					</div>
 
 					<div class="col-lg-3">
+<<<<<<< HEAD
 						<a href="img/pic2.JPG" data-title="The Balance Photo Gallery 2" data-lightbox="theBalance">
+=======
+						<a href="img/pic2.jpg" data-title="The Balance Photo Gallery 2" data-lightbox="theBalance">
+>>>>>>> c4cdb641429a6bd925d6ceabe05f18f685d6bac3
 							{!! Html::image('img/pic2.JPG','galary image', [ "width"=>"200px", "class"=>"img-thumbnail"]); !!}
 						</a>
 					</div>
