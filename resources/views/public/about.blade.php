@@ -89,6 +89,6 @@
                             will support us whole-heartedly in this cause.
                         </p>
        			    </div>
-       			    &nbsp;&nbsp;
+
        	      	</div>
 @endsection
