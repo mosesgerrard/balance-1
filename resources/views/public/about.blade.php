@@ -9,8 +9,6 @@
 
 @section('container')
 
-<h1>about page</h1>
-
        <!-- ABOUT PAGE
        		======================================================= -->
        	    <hr role="separator" class="divider">
