@@ -18,7 +18,7 @@
 									<li>
 										<a href="{{url('signup')}}" class="logout">
 											<span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>
-											Create Memeber <!-- logout icon -->
+											Create Member <!-- logout icon -->
 										</a>
 									</li>
 									<li>
@@ -33,7 +33,7 @@
 							<div class="col-md-7">
 								<ul class="pull-right">
 																	<li>
-                                										<a href="{{url('auth/logout')}}" class="logout">
+                                										<a href="{{url('home')}}" class="logout">
                                 											<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                                 											Public Site <!-- logout icon -->
                                 										</a>

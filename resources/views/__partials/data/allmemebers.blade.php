@@ -22,7 +22,7 @@
 								        @foreach($data as $key => $value)
 								        <tr>
 								                <td>{{$key + 1}}</td>
-								                <td><a href="#">{{ucwords($value['person']['fullname'])}}</a></td>
+								                <td><a href="{{route('memberships.show',$value['id'])}}">{{ucwords($value['person']['fullname'])}}</a></td>
 								                 <td>{{ucwords($value['person']['gender'])}}</td>
 								                <td>{{ucwords($value['person']['nationalities'])}}</td>
 								                <td>{{ucwords($value['person']['occupation'])}}</td>

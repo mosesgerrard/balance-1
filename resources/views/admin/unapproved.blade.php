@@ -7,7 +7,7 @@
                        <h1 class="pull-center"><b>Un-approved members</b></h1>
                </div>
                <div class="content-inner">
-                   @include('__partials/data/unapproved')
+                   @include('__partials/data/approvedmembers')
                    {!! $data->render() !!}
                </div>
            @endsection

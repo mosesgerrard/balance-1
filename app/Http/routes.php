@@ -12,7 +12,6 @@
 */
 
 
-//use Illuminate\Routing\Route;
 
 Route::get('/', 'PublicController@index');
 
@@ -24,12 +23,15 @@ Route::get('videos', 'PublicController@showVideos');
 Route::get('gallery', 'PublicController@showGallary');
 // Route::post('contact-us', ['as'=>'sendmessage', 'uses'=>'PublicController@postEmail']);
 Route::post('sendmessage', function(){
+    $input = request()->all();
+        Mail::queue('__partials/data/sendmail', ['input'=>$input] , function($message) use($input){
 
-        Mail::send('__partials/data/sendmail', ['some','on'], function($message){
+            $email = "queensyj2@hotmail.co.uk";
+            $message->to($email)
+                    ->subject($input['subject']);
 
-            $message->to('sulsiralumo@gmail.com')
-                    ->subject('a message from laravel');
         });
+    return redirect()->to('home');
 });
 
 Route::get('signup', 'PublicController@showSignup');
@@ -41,7 +43,7 @@ Route::resource('memberships', 'MembersshipsController');
 Route::resource('sessions','SessionsController');
 
 // Authentication routes...
-//Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
@@ -52,4 +54,14 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('admin', 'AdminController');
 //    Route::get('auth/register', 'Auth\AuthController@getRegister');
+});
+
+
+Route::any('download/{url}/{filename}',function($url,$filename){
+
+
+	if(File::exists($url)) return response()->download(public_path().'/'.$url.'/'.$filename);
+	
+	return redirect()->back();
+
 });

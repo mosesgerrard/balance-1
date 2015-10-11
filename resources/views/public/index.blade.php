@@ -52,11 +52,13 @@
 			        		&nbsp;&nbsp;&nbsp;
 			          		<img class="col-lg-2 img-circle img-responsive" src="img/eu_logo.jpg" width="100" height="100" alt="GRTS image">
 			          		&nbsp;&nbsp;&nbsp;
-			          		<img class="col-lg-2 img-circle img-responsive" src="img/worldbank.jpg" width="100" height="100" alt="GRTS image">
+			          		<img class="col-lg-2 img-circle img-responsive" src="img/nea.jpg" width="100" height="100" alt="GRTS image">
 			          		&nbsp;&nbsp;&nbsp;
 			        	</div>
 			        </div>&nbsp;&nbsp;&nbsp;
 			    </div>
 	      	</div>
+
+
 
 @endsection

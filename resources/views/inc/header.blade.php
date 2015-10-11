@@ -11,7 +11,7 @@
 
 				<!-- bootstrap -->
 				{!! Html::style('css/bootstrap.min.css') !!}
-                {!! Html::style('css/bootstrap-theme.min.css') !!}
+                {{-- {!! Html::style('css/bootstrap-theme.min.css') !!} --}}
                 {!! Html::style('css/carousel.css') !!}
         	    {!! Html::style('css/style.css') !!}
         	    {!! Html::style('css/admin.css') !!}
