@@ -81,19 +81,11 @@ body {
 }
 
 
-/* ==================GALLERY PAGE======================= 
-.img-thumbnail img:hover {
-	transform: scale(1.1);
+/* ==================GALLERY PAGE================================= */
+.foto-gallery {
+	margin-top: 100px;
+    padding: 20px;
 }
-
-.img-thumbnail img {
-	transition: all 0.3s ease 0s;
-	width: 100%;
-}
-
-.img-thumbnail {
-	overflow: hidden;
-} */
 
 
 

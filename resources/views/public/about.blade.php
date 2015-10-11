@@ -11,8 +11,7 @@
 
        <!-- ABOUT PAGE
        		======================================================= -->
-       	    <hr role="separator" class="divider">
-       	      	<div class="about">
+       	        <div class="about">
        	      		<div class="container">
        		      		<h2>The Balance Concept Note</h2>
        			        <p> The rate at which young people are braving the merciless ocean in the hopes of gaining a
