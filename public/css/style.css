@@ -80,6 +80,7 @@ body {
 	color: red;
 }
 
+<<<<<<< HEAD
 div.partners-img > img{
 	float: left;
 	display: inline-block;
@@ -95,10 +96,14 @@ div.partners-img > img{
 .hero-unit {
 	padding-left: 15px;
 }
+=======
 
-.section-unit {
-	padding-left: 35px;
+/* ==================GALLERY PAGE================================= */
+.foto-gallery {
+	margin-top: 100px;
+    padding: 20px;
 }
+
 
 
 /* ==================MODAL SIGNIN DIALOG BOX======================= */

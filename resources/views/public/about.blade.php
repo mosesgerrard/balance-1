@@ -9,12 +9,7 @@
 
 @section('container')
 
-<h1>about page</h1>
-
-
-       	    <hr role="separator" class="divider">
-       	      	<div class="about">
-       	      		<div class="container">
+      	      		<div class="container">
        		      		<h2>The Balance Concept Note</h2>
        			        <p> The rate at which young people are braving the merciless ocean in the hopes of gaining a
        			            better life abroad is disheartening. Our brothers are daily perishing on the seas and this
@@ -88,6 +83,6 @@
                             will support us whole-heartedly in this cause.
                         </p>
        			    </div>
-       			    &nbsp;&nbsp;
+
        	      	</div>
 @endsection

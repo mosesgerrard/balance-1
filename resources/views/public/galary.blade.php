@@ -12,8 +12,93 @@
 		<!-- GALLERY
 		======================================================= -->
 		<div class="container">
-			<h1>Photo Gallery</h1>
 			<div class="gallery">
+
+			    <h2 class="foto-gallery">Bundung Road</h2>
+			    <hr role="separator" class="divider">
+			    <p> This is a picture gallery of Bundung main highway. We want to bring the attention of the government
+			        and the relevant stakeholders to the current status quo of the road and highlight the dangers and
+			        difficulties  it poses to businesses, drivers and commuters; as well as solicitude funds for
+			        the maintenance of the road in order to remedy the situation</p>
+
+                <div class="row" preload="true">
+                	<div class="col-lg-3">
+                		<a href="img/roadf1.jpg" data-title="Bundung Highway 1" data-lightbox="theBalance">
+                			<img src="img/road1.jpg" width="200px" class="img-thumbnail"/>
+                		</a>
+                	</div>
+
+                	<div class="col-lg-3">
+                		<a href="img/road2.jpg" data-title="Bundung Highway 2" data-lightbox="theBalance">
+                			<img src="img/road2.jpg" width="200px" class="img-thumbnail"/>
+                		</a>
+                	</div>
+
+                	<div class="col-lg-3">
+                		<a href="img/road3.jpg" data-title="Bundung Highway 3" data-lightbox="theBalance">
+                			<img src="img/road3.jpg" width="200px" class="img-thumbnail"/>
+                		</a>
+                	</div>
+
+                	<div class="col-lg-3">
+                		<a href="img/road4.jpg" data-title="Bundung Highway 4" data-lightbox="theBalance">
+                			<img src="img/road4.jpg" width="200px" class="img-thumbnail"/>
+                		</a>
+                	</div>
+                </div> <!-- ROW ONE ENDS -->
+
+                &nbsp;
+                <div class="row" preload="true">
+                    <div class="col-lg-3">
+                        <a href="img/roadf5.jpg" data-title="Bundung Highway 5" data-lightbox="theBalance">
+                            <img src="img/road5.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <a href="img/road6.jpg" data-title="Bundung Highway 6" data-lightbox="theBalance">
+                            <img src="img/road6.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <a href="img/road7.jpg" data-title="Bundung Highway 7" data-lightbox="theBalance">
+                            <img src="img/road7.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <a href="img/road8.jpg" data-title="Bundung Highway 8" data-lightbox="theBalance">
+                            <img src="img/road8.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+                </div> <!-- ROW TWO ENDS -->
+
+                 &nbsp;
+                <div class="row" preload="true">
+                    <div class="col-lg-3">
+                        <a href="img/roadf9.jpg" data-title="Bundung Highway 9" data-lightbox="theBalance">
+                            <img src="img/road9.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <a href="img/road10.jpg" data-title="Bundung Highway 10" data-lightbox="theBalance">
+                            <img src="img/road10.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <a href="img/road11.jpg" data-title="Bundung Highway 11" data-lightbox="theBalance">
+                            <img src="img/road11.jpg" width="200px" class="img-thumbnail"/>
+                        </a>
+                    </div>
+                </div> <!-- ROW THREE ENDS -->
+
+                 &nbsp;&nbsp;
+			    <h2>The Balance Crew Members and Supporters</h2>
+			    <hr role="separator" class="divider">
+
 				<div class="row" preload="true">
 					<div class="col-lg-3">
 
@@ -45,7 +130,7 @@
 				</div> <!-- ROW ONE ENDS -->
 
                   &nbsp;
-				<div class="row">
+				<div class="row" preload="true">
 					<div class="col-lg-3">
 						<a href="img/pic4.JPG" data-title="The Balance Photo Gallery 5" data-lightbox="theBalance">
 							{!! Html::image('img/pic5.JPG','galary image', [ "width"=>"200px", "class"=>"img-thumbnail"]); !!}
@@ -72,13 +157,6 @@
 				</div> <!-- ROW TWO ENDS -->
 
 				&nbsp;
-				<div class="row">
-					<div class="col-lg-3">
-						<a href="img/pic9.JPG" data-title="The Balance Photo Gallery 9" data-lightbox="theBalance">
-							{!! Html::image('img/pic9.JPG','galary image', [ "width"=>"200px", "class"=>"img-thumbnail"]); !!}
-						</a>
-					</div>
-
 					<div class="col-lg-3">
 						<a href="img/pic10.JPG" data-title="The Balance Photo Gallery 10" data-lightbox="theBalance">
 							{!! Html::image('img/pic10.JPG','galary image', [ "width"=>"200px", "class"=>"img-thumbnail"]); !!}
@@ -99,5 +177,4 @@
 				</div> <!-- ROW THREE ENDS -->
 			</div>
 		</div>
-  <hr role="separator" class="divider">
-@endsection
+ @endsection
